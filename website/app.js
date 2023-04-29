@@ -81,7 +81,7 @@ const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
 //PLAYLIST PART                                
                                 
 const playerDiv = document.getElementById('player');
-playerDiv.innerHTML =  `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/${track}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
+playerDiv.innerHTML =  `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5u0j9gJrqH2PpJQMTaVswz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
 const podcastRefresh = document.getElementById('listening');
 let buttonPressed = false;
 podcastRefresh.addEventListener('click', () => {
