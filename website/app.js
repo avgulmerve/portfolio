@@ -29,12 +29,12 @@ document.getElementById("contacts-button").addEventListener('click', function(){
 
 //GET AND POST DATA
 
-const playList = ( async () => {const playlist_id = '5u0j9gJrqH2PpJQMTaVswz';
+/*const playList = ( async () => {const playlist_id = '5u0j9gJrqH2PpJQMTaVswz';
 
-//const client_id = 
-//const client_secret = 
+const client_id = 
+const client_secret = 
 
-/*const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
+const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
 	method: 'POST',
 	headers: {	
         'Content-Type': 'application/x-www-form-urlencoded',
