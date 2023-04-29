@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@500&family=Rubik:wght@300;500&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/*HOME PAGE*/
+
+p {
+    margin: 0 0 0.25rem;
+}
+
+body{
+    font-family: "Blinker",  Arial, sans-serif;
+    background-color: #362326;
+    color: antiquewhite;
+}
+
+header {
+    background-image: url("pxfuel2.jpg");
+    background-repeat: no-repeat;
+}
+
+.nav-primary {
+    display: flex;
+    backdrop-filter: blur(0.15rem);
+    justify-content: center;
+    gap: 2.5rem;
+    padding-top: 1rem;
+    list-style-type: none;
+
+}
+
+.active a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Blinker",  Arial, sans-serif;
+    color: antiquewhite;
+
+}
+
+#admin {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Blinker",  Arial, sans-serif;
+    color: antiquewhite;
+
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.admin-input[data-control="false"] {
+    display: none;
+}
+
+.spotify-button[spotify-control="false"] {
+    display: none;
+}
+
+.admin-input-area{
+    background: transparent;
+    border:  0.15rem solid antiquewhite;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-family: "Blinker",  Arial, sans-serif;
+}
+
+.admin-button {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Blinker",  Arial, sans-serif;
+    background-color: antiquewhite;
+    color: #362326;
+    font-size: 1rem;
+    border: none;
+    border:  0.15rem solid antiquewhite;
+    margin: 0.50rem;
+}
+
+
+
+@media (max-width:600px) {
+    .nav-primary {
+        inset: 0 0 0 30%;
+        position: fixed;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem 5rem;
+        background: hsl(0, 0%, 100% / 0.1);
+        backdrop-filter: blur(2rem);
+        transform: translateX(100%);
+        transition: transform 350ms ease-in-out;
+
+    }
+
+    .nav-primary[data-visible= "true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+        background-image: url("menu.svg");
+        background-color: antiquewhite;
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        height: 2rem;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .mobile-nav[aria-expanded="true"] {
+        background-image: url("close-sharp.svg");
+        background-color: antiquewhite;
+    }
+
+    .sr-only{
+        visibility: hidden;
+    }
+    
+}
+
+
+.hero-content {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    text-align: center;
+    font-size: 2rem;
+    color: antiquewhite;
+   
+}
+
+
+@media (min-width:900px) {
+    .hero-content {
+    /*backdrop-filter: blur(0.15rem);*/
+    color: #6e3519;
+    }
+}
+
+/*ABOUT PAGE*/
+
+.name-head {
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+.pages {
+    padding-left: 6rem;
+    padding-right: 6rem;
+
+}
+
+.title, .listening {
+    text-transform: uppercase;
+    line-height: 5.1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.about-explanation {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    line-height: 2.8rem;
+    text-align: center;
+}
+
+.spotify-refresh{
+    text-align: center;
+}
+
+.spotify-button {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Blinker",  Arial, sans-serif;
+    background-color: #00D856;
+    color: antiquewhite;
+    border: none;
+    border:  0.15rem solid antiquewhite;
+    padding: 0.50rem 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+/*MY WORK*/
+
+
+.projects-info{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 2rem;
+}
+
+.projects-para{
+   text-transform: uppercase;
+   font-size: 1.50rem;
+   margin: 1rem 0;
+}
+
+.project-button{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Blinker",  Arial, sans-serif;
+    background:transparent;
+    color: antiquewhite;
+    border: none;
+    border:  0.15rem solid antiquewhite;
+    padding: 1rem 2rem;
+    margin: 1rem 1rem 1rem 0rem;
+}
+
+.project-link, .spotify-link{
+    color: antiquewhite;
+}
+
+.project-img{
+    width: 100%;
+    background-color: transparent;
+    display: block;
+    margin:auto
+}
+
+
+@media (min-width:700px){
+    .project-img {
+        width: 80%;
+        background: transparent;
+        display: block;
+        margin:auto
+    }
+
+    .projects-info{
+        display: flex;
+        flex-direction: row;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin: 2rem;
+    }
+
+    .projects-info > * {
+        flex: 1;
+    }
+
+    .projects-para{
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        margin: 1rem 0;
+     }
+
+}
+
+/*CONTACT*/
+
+.footer {
+    padding: 0 6rem;
+}
+
+.message-line {
+    text-align: center;
+    align-items: center;
+}
+
+
+.contact-line {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+}
+
+@media (min-width:900px){
+    .contact-line {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+}
+
+.security-line {
+    align-items: left;
+    text-align: left;
+
+}
+
+.fineprint {
+    margin-bottom: 1rem;
+}
+
+.form-input {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    background: #5c3e43;
+    line-height: inherit;
+    box-shadow: none;
+    border: solid antiquewhite;
+    padding: 2rem;
+    width: 100%;
+    color: antiquewhite;
+    font-family: "Blinker",  Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+input::placeholder, textarea::placeholder {
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Blinker",  Arial, sans-serif;
+    color: antiquewhite
+
+}
+
+.submit-button {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: "Blinker",  Arial, sans-serif;
+    background:transparent;
+    color: antiquewhite;
+    border:  0.15rem solid antiquewhite;
+    padding: 1.5rem 4rem;
+    margin: 1rem 1rem 1rem 0rem;
+
+}
+
+.back{
+
+    padding: 2rem;
+    align-items: center;
+}
+
+.social-media {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-media-icons {
+    color:antiquewhite;
+    font-size: 3rem;
+    
+}
+
+.last-line {
+    display: flex;
+    justify-content: center;
+}
+
+.name-last-line {
+    color:antiquewhite;
+    text-decoration: none;
+}
