@@ -129,4 +129,36 @@ adminRefresh.addEventListener('click', () => {
         }
 
             })
+
+//Contact
+
+const API_KEY = "bWNoGx9Pwp0wL_Sn41MQ-amjd-rdDijMP6C-BQo6q4nVRnXEOX-ey6vXD9g";
+const SPREADSHEET_ID = "14clEqD2RlxgaB_QFDDp3GVmGyw7yQFDw2zquMvxglCk";
+const firstnameVal = document.querySelector('#firstname');
+const lastnameVal = document.querySelector('#lastname');
+const emailVal = document.querySelector('#email');
+const phoneVal = document.querySelector('#phone');
+const subjectVal = document.querySelector('#subject');
+const messageVal = document.querySelector('#message');
+
+const send = document.querySelector('.send-button')
+send.addEventListener('click', () => {
+    const firstnameValue = firstnameVal.value;
+    const lastnameValue = lastnameVal.value;
+    const emailValue = emailVal.value;
+    const phoneValue = phoneVal.value;
+    const subjectValue = subjectVal.value;
+    const messageValue = messageVal.value;
+    console.log(messageValue);
+    fetch("https://api.sheetson.com/v2/sheets/Contacts", {
+        method: "POST",
+        headers:{  "Authorization": `Bearer ${API_KEY}`,
+                "X-Spreadsheet-Id": SPREADSHEET_ID,
+                "Content-Type": "application/json"
+            },
+        body: JSON.stringify({
+            firstname: `${firstnameValue}`, lastname: `${lastnameValue}`, email: `${emailValue}`, phone: `${phoneValue}`, subject: `${subjectValue}`, message: `${messageValue}`})
+    }).then(r => r.json()).then(result => console.log(result))
+
+})
             
