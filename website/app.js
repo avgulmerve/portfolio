@@ -29,10 +29,10 @@ document.getElementById("contacts-button").addEventListener('click', function(){
 
 //GET AND POST DATA
 
-/*const playList = ( async () => {const playlist_id = '5u0j9gJrqH2PpJQMTaVswz';
+const playList = ( async () => {const playlist_id = '5u0j9gJrqH2PpJQMTaVswz';
 
-const client_id = 
-const client_secret = 
+const client_id = 'b9ac3b351a0a44bfb105c09bd6daee14';
+const client_secret = 'ed20670325e6453c9f2ac1a6e642ecc7'; 
 
 const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
 	method: 'POST',
@@ -52,7 +52,6 @@ const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
 
         const playlist = await playListResponse.json();
         console.log(playlist.id);
-        let track=playlist.id;
 
     const playlistTracks = await fetch(`https://api.spotify.com/v1/playlists/3BRiEwNPQNgiDUzsl8OyH8`, {
         method : 'GET',
@@ -60,15 +59,19 @@ const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
     })
         const tracksList = await playlistTracks.json();
         console.log(tracksList.id);
+
+        let track=playlist.id;
         let tarkanTrack = tracksList.id;
-        
         const playerDiv = document.getElementById('player');
         playerDiv.innerHTML =  `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/${track}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
         const podcastRefresh = document.getElementById('listening');
-        
         let buttonPressed = false;
         podcastRefresh.addEventListener('click', () => {
+            //const songlist = document.getElementById('spotify');
+            //songlist.innerHTML=`<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/${tarkanTrack}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+
             buttonPressed = !(buttonPressed)
+            console.log(buttonPressed)
             if( buttonPressed=== true){
                 playerDiv.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/${tarkanTrack}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
             } else {
@@ -76,22 +79,7 @@ const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
             }
 
         });
-})();*/
-                                
-//PLAYLIST PART                                
-                                
-const playerDiv = document.getElementById('player');
-playerDiv.innerHTML =  `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5u0j9gJrqH2PpJQMTaVswz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
-const podcastRefresh = document.getElementById('listening');
-let buttonPressed = false;
-podcastRefresh.addEventListener('click', () => {
-            buttonPressed = !(buttonPressed)
-            if( buttonPressed=== true){
-                playerDiv.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3BRiEwNPQNgiDUzsl8OyH8?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-            } else {
-                playerDiv.innerHTML =  `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5u0j9gJrqH2PpJQMTaVswz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
-            }
-        });
+})();
 
 // ADMİN PART 
                                 
