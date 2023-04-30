@@ -111,32 +111,33 @@
                 <div class="title">
                     <h4>Let's build something.</h4>
                 </div>
-                <div class="front" action="">
-                    <form class="form" action="">
+                <div class="front">
+                    <form class="form">
                         <div class="contact-line">
                             <div class="contact-form-input">
-                                <input class="form-input" type="text" name="firstname" placeholder="First Name *" value="" required="">
+                                <input class="form-input" id="firstname" type="text" name="firstname" placeholder="First Name *" value="" required="">
                             </div>
                             <div class="contact-form-input">
-                                <input class="form-input" type="text" name="lastname" placeholder="Last Name *" value="" required="">
+                                <input class="form-input" id="lastname" type="text" name="lastname" placeholder="Last Name *" value="" required="">
                             </div>
                         </div>
                         <div class="contact-line">
                             <div class="contact-form-input">
-                                <input class="form-input" type="email" name="email" placeholder="Email *" value="" required="">
+                                <input class="form-input" id="email" type="email" name="email" placeholder="Email *" value="" required="">
                             </div>
                             <div class="contact-form-input">
-                                <input class="form-input" type="tel" name="phone" placeholder="Phone" value="">
+                                <input class="form-input" id="phone" type="text" name="phone" placeholder="Phone" value="">
                             </div>
                         </div>
                         <div class="message-line">
                             <div class="contact-form-input">
-                                <input class="form-input" type="subject" name="subject" placeholder="Subject *" value="" required="">
+                                <input class="form-input" id="subject" type="subject" name="subject" placeholder="Subject *" value="" required="">
                             </div>
                             <div class="contact-form-input">
-                                <textarea class="form-input" name="message" type="text" placeholder="Message *" value="" required=""></textarea>
+                                <input class="form-input" id="message" name="message" type="text" placeholder="Message *" value="" required="">
                             </div>
                         </div>
+                        
                         <div class="security-line">
                             <div class= "data-privacy">
                                 <p class ="fineprint">
@@ -145,7 +146,13 @@
                                 </p>
                             </div>
                             <div>
-                                <button name="submit" type="submit" class="submit-button">Send It</button>
+                            <!--<div class="captcha-sth" style="width: 304px; height: 78px;">
+                                <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lft9pEUAAAAAG8g30HbjfOZd38GhdWvMTLqlVc7&amp;co=aHR0cHM6Ly9jaGFzZW9obHNvbi5jb206NDQz&amp;hl=en&amp;type=image&amp;v=4PnKmGB9wRHh1i04o7YUICeI&amp;theme=dark&amp;size=normal&amp;badge=bottomright&amp;cb=dek50kaqkpb4" width="304" height="78" role="presentation" name="a-z16m3wiezkji" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="align-items: center;  width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                <iframe style="display: none;"></iframe>
+                            </div>
+                            <div>-->
+                                <button name="send" type="button" class="send-button">Send It</button>
                             </div>
                         </div>
                     </form>
@@ -159,7 +166,7 @@
                     </ul>
                 </div>
                 <div class="copy-line">
-                    <span class="last-line">© Copyright <!-- -->2023<!-- --> − <a href="/" class="name-last-line">Merve Gül</a></span>
+                    <span class="last-line">© Copyright <!-- -->2023<!-- --> − <a class="name-last-line">Merve Gül</a></span>
                 </div>
             </section>
         </footer>
