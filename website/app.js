@@ -29,10 +29,8 @@ document.getElementById("contacts-button").addEventListener('click', function(){
 
 //GET AND POST DATA
 
-const playList = ( async () => {const playlist_id = '5u0j9gJrqH2PpJQMTaVswz';
+const playList = ( async () => {const
 
-const client_id = 'b9ac3b351a0a44bfb105c09bd6daee14';
-const client_secret = 'ed20670325e6453c9f2ac1a6e642ecc7'; 
 
 const tokenResponse = await fetch('https://accounts.spotify.com/api/token', {
 	method: 'POST',
@@ -120,8 +118,6 @@ adminRefresh.addEventListener('click', () => {
 
 //Contact
 
-const API_KEY = "bWNoGx9Pwp0wL_Sn41MQ-amjd-rdDijMP6C-BQo6q4nVRnXEOX-ey6vXD9g";
-const SPREADSHEET_ID = "14clEqD2RlxgaB_QFDDp3GVmGyw7yQFDw2zquMvxglCk";
 const firstnameVal = document.querySelector('#firstname');
 const lastnameVal = document.querySelector('#lastname');
 const emailVal = document.querySelector('#email');
